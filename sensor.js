@@ -13,6 +13,7 @@ class Sensor {
     this.#castRays();
 
     this.readings = [];
+    // Basically sets the readings array with the offset of object (actually a car or the road walls) if this object is being touched by any of the sensors
     for (let i = 0; i < this.rays.length; i++) {
       this.readings.push(this.#getReading(this.rays[i], roadBorders, traffic));
     }
